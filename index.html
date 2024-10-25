@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Portfólio - Manuela Magalhães</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div id="logo"><h1>Manuela Magalhães</h1></div>
+    <nav>
+      <ul>
+        <li>Inicio</li>
+        <li>Habilidades</li>
+        <li>Projetos</li>
+        <li>Contatos</li>
+        <li><button id="toggle-theme">Alternar Tema</button></li>
+      </ul>
+      
+    </nav>
+  </header>
+
+  <main>
+    <section class="intro">
+      <h1>Olá, bem-vindos ao meu portfólio!</h1>
+      <p>Aqui mostro um pouco do meu trabalho e trajetória na tecnologia.</p>
+      <section class="about">
+        <h2>Quem sou eu</h2>
+        <p>Atualmente cursando o 2º ano no Colégio Cotemig, estou me especializando em Ambientes Computacionais, Banco de Dados 1, Desenvolvimento Front-end e Lógica de Programação. Busco constantemente aprimorar minhas habilidades e aprender novas tecnologias, com o objetivo de trabalhar com desenvolvimento de software e aprender mais sobre Inteligência Artificial.
+          Tenho facilidade para trabalhar em equipe, sempre contribuindo com ideias criativas. No meu tempo livre, gosto de estar com meus entes queridos e brincar com meus cachorros, Nina e Simba. Sou apaixonada por animais e tecnologia, buscando sempre evoluir em ambos os aspectos.</p>
+        <p id="redes">Acesse minhas redes sociais</p>
+          <a href="https://github.com/Manuela12301906" class="button"><img class="ico"src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="">Github</a>
+        <a href="https://bit.ly/ManuelaMagalhaesRubens" class="button"><img class="ico" src="https://cdn-icons-png.flaticon.com/256/174/174857.png" alt="">LinkedIn</a>
+      </section>
+    </section>
+    
+
+
+    <section class="photo">
+      <img src="perfil.png" alt="Foto de Manuela Magalhães">
+    </section>
+
+
+  </main>
+
+  <main>
+  
+    <section id="experiencias" class="experiencias-section">
+      <h2>Experiências</h2>
+      
+      <div class="experiencias-container">
+        <div class="experiencia-box">
+          <p>No primeiro ano do ensino médio, tive aulas de Robótica, Manutenção de Computadores e Informática Básica.</p>
+        </div>
+        
+        <div class="experiencia-box">
+          <p>Nas aulas de Informática, tive o privilégio de me aprofundar mais no VISUALG, no App Inventor, entre outras ferramentas.</p>
+        </div>
+        
+        <div class="experiencia-box">
+          <p>No segundo ano do ensino médio, estou aprofundando meus conhecimentos em Desenvolvimento Front-end, Lógica e Programação, Banco de Dados e Ambientes Computacionais.</p>
+        </div>
+      </div>
+    
+      <div class="eventos">
+        <div class="evento">
+          <img src="minas-summit.png" alt="Evento Cotemig">
+          <p>Em 2024, o colégio Cotemig proporcionou aos alunos a oportunidade de participar do evento Minas Summit...</p>
+        </div>
+        
+        <div class="evento">
+          <img src="hacktown.png" alt="Evento Hacktudo">
+          <p>Este ano, também tive a oportunidade de participar do Hacktudo, um evento transformador para minha vida.</p>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <main>
+    <section id="projetos" class="carousel-section">
+      <h2>Projetos</h2>
+      
+      <div class="carousel-container">
+        <button class="carousel-btn prev-btn">&#9664;</button>
+        
+        <div class="carousel-slide">
+          <div class="projeto">
+            <img src="Ogani.PNG" alt="Imagem do Projeto 1">
+            <h3>Ogani Grid</h3>
+            <p>Site de Delivery Saudável</p>
+          </div>
+          <div class="projeto">
+            <img src="Donuts.png" alt="Imagem do Projeto 1">
+            <h3>Encanto Donuts</h3>
+            <p>Site de Delivery Donuts</p>
+          </div>
+          <div class="projeto">
+            <img src="Matricula_Cotemig.png" alt="Imagem do Projeto 1">
+            <h3>Matrícula do colégio Cotemig</h3>
+            <p>Recriação do site de rematrícula do colégio Cotemig</p>
+          </div>
+        </div>
+        <button class="carousel-btn next-btn">&#9654;</button>
+      </div>
+      
+      <div class="carousel-indicator">
+        <span id="projeto-atual">1</span> / <span id="total-projetos">3</span>
+      </div>
+  </main>
+
+  <main>
+    <section id="contato" class="contact-section">
+      <h2>Contato</h2>
+      
+      <form id="contact-form">
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" placeholder="Digite seu nome">
+        </div>
+        
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" placeholder="Digite seu email">
+        </div>
+        
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" placeholder="(xx) xxxx-xxxx">
+        </div>
+        
+        <div class="form-group">
+          <label for="mensagem">Mensagem:</label>
+          <textarea id="mensagem" name="mensagem" rows="4" placeholder="Escreva sua mensagem"></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">Enviar</button>
+      </form>
+    
+      <div id="form-messages"></div>
+    </section>
+  </main>
+
+  <footer id="footer">
+    <div class="footer-content">
+      <p>&copy; 2024 Manuela Magalhães. Todos os direitos reservados.</p>
+      <div class="footer-social">
+        <a href="https://github.com/Manuela12301906" target="_blank">Github</a>
+        <a href="https://bit.ly/ManuelaMagalhaesRubens" target="_blank">LinkedIn</a>
+      </div>
+    </div>
+  </footer>
+  
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,491 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+:root {
+  --bg-color: #FFC2EC;
+  --text-color: #000;
+  --button-bg: #4b0082;
+  --button-text: #fff;
+  --header-bg: #ff6bd0;
+  --photo-bg: #fff;
+  --box-bg: #fff; 
+  --carousel-btn-bg: #ff69b4; /* Botões do carrossel */
+}
+
+[data-theme="dark"] {
+  --bg-color: #2c2c2c;
+  --text-color: #fff;
+  --button-bg: #4b0082;
+  --button-text: #fff;
+  --photo-bg: #2b2b2b;
+  --header-bg: #000000;
+  --box-bg: #444; 
+  --carousel-btn-bg: #4b0082; /* Botões no modo escuro */
+}
+
+* {
+  margin: 0;
+  font-family: "Kanit", sans-serif;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+}
+
+header {
+  background-color: var(--header-bg);
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  padding: 1em 0;
+}
+
+#logo h1 {
+  font-weight: 300;
+}
+
+
+
+#redes {
+  font-weight: 600;
+  font-size: 20px;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 5px 30px;
+}
+
+nav a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-weight: bold;
+  font-weight: 300;
+}
+
+nav a:hover {
+  text-decoration: underline;
+
+}
+
+button {
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  opacity: 0.8;
+}
+
+main {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+
+}
+
+.intro {
+  max-width: 40%;
+  text-align: center;
+}
+
+.intro h1 {
+  font-weight: 500;
+}
+
+.about h1 {
+  font-weight: 500;
+}
+
+.about {
+  margin-top: 50px;
+  max-width: 100%;
+  text-align: left;
+}
+
+.photo {
+  width: 40%;
+  display: flex;
+  justify-content: center;
+}
+
+.photo img {
+  max-width: 350px;
+
+  border: solid 3px white;
+
+}
+
+.button {
+  display: inline-block;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  margin-right: 10px;
+  margin-top: 30px;
+}
+
+.button:hover {
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  main {
+    flex-direction: column-reverse;
+    width: 100%;
+  }
+
+  header{
+    flex-direction: column;
+  }
+
+  .intro,
+  .about {
+    max-width: 100%;
+    width: 100%;
+    text-align: center;
+  }
+
+  .photo {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 2em;
+  }
+
+  .photo img {
+    margin-top: 1rem;
+    max-width: 300px;
+  }
+
+  nav ul {
+  
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+#experiencias {
+  margin-top: 10vh;
+  text-align: center;
+}
+
+.experiencias-section h2 {
+  font-size: 2.5rem;
+  color: var(--text-color);
+  margin-bottom: 2rem;
+}
+
+.experiencias-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+  width: 90%;
+  margin-inline-start: 5%;
+}
+
+.experiencia-box {
+  background-color: var(--box-bg);
+  color: var(--text-color);
+  padding: 1rem;
+  border-radius: 10px;
+  width: 30%;
+  font-size: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.eventos {
+  display: flex;
+  justify-content: space-between;
+  margin: 5%;
+}
+
+.evento {
+  max-width: 45%;
+  background-color: var(--box-bg);
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.evento img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+@media (max-width: 768px) {
+  .experiencias-container {
+    flex-direction: column;
+  }
+
+  .experiencia-box {
+    width: 90%;
+    margin-inline-start: 5%;
+    margin-bottom: 1rem;
+  }
+
+  .eventos {
+    flex-direction: column;
+  }
+
+  .evento {
+    max-width: 100%;
+    margin-bottom: 1rem;
+  }
+}
+
+
+.carousel-section {
+  padding: 2rem;
+  text-align: center;
+  background-color: var(--bg-color);
+  color: var(--text-color);
+}
+
+.carousel-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  max-width: 80%;
+  margin: 0 auto;
+  overflow: hidden;
+}
+
+.carousel-slide {
+  display: flex;
+  transition: transform 0.4s ease-in-out;
+  width: 100%;
+}
+
+.projeto {
+  min-width: 100%;
+  padding: 2rem;
+  background-color: var(--box-bg);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 10px;
+  text-align: center;
+}
+
+.projeto img {
+  max-width: 100%;
+  max-height: 200px; /* Limita a altura da imagem */
+  object-fit: cover;
+  border-radius: 10px;
+  margin-bottom: 1rem; /* Espaçamento entre a imagem e o nome do projeto */
+}
+
+.carousel-btn {
+  background-color: var(--carousel-btn-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 50%;
+  font-size: 2rem;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  position: absolute; /* Garante que eles fiquem no lugar correto */
+  z-index: 10; /* Mantém os botões sobre os elementos do carrossel */
+}
+
+.carousel-btn:hover {
+  background-color: var(--button-bg);
+}
+
+.prev-btn {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.next-btn {
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.carousel-indicator {
+  margin-top: 1rem;
+  font-size: 1.2rem;
+}
+
+@media (max-width: 768px) {
+  .carousel-container {
+    flex-direction: column;
+  }
+  
+  .carousel-btn {
+    position: static;
+    margin: 1rem 0;
+  }
+
+  .projeto {
+    padding: 1rem;
+  }
+}
+
+:root {
+
+  --text-color: #000;
+  --input-bg: #fff;
+  --input-border: #ccc;
+  --button-bg: #ff69b4;
+  --button-text: #fff;
+  --error-color: red;
+}
+
+[data-theme="dark"] {
+
+  --text-color: #fff;
+  --input-bg: #444;
+  --input-border: #666;
+  --button-bg: #4b0082;
+}
+
+.contact-section {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  padding: 2rem;
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  border-radius: 10px;
+  margin-top: 10vh;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.contact-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border-radius: 5px;
+  border: 1px solid var(--input-border);
+  background-color: var(--input-bg);
+  color: var(--text-color);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  outline: none;
+  border-color: var(--button-bg);
+}
+
+.submit-btn {
+  width: 100%;
+  padding: 1rem;
+  background-color: var(--button-bg);
+  color: var(--button-text);
+  border: none;
+  border-radius: 5px;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.submit-btn:hover {
+  background-color: var(--button-text);
+  color: var(--button-bg);
+}
+
+#error-message {
+  color: var(--error-color);
+  margin-top: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contact-section {
+    padding: 1rem;
+  }
+
+  .form-group input,
+  .form-group textarea {
+    padding: 0.5rem;
+  }
+}
+
+
+:root {
+  --header-footer-bg: #ff69b4; /* Mesma cor do header */
+  --footer-text-color: white;
+  --footer-link-hover: #ff1493;
+}
+
+[data-theme="dark"] {
+  --header-footer-bg: #4b0082;
+  --footer-link-hover: #9370db;
+}
+
+#footer {
+  background-color: var(--header-footer-bg);
+  color: var(--footer-text-color);
+  text-align: center;
+  padding: 1.5rem 0;
+  position: relative;
+  bottom: 0;
+  width: 100%;
+  margin-top: 15vh;
+}
+
+.footer-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-social a {
+  color: var(--footer-text-color);
+  margin: 0 10px;
+  text-decoration: none;
+  transition: color 0.3s;
+}
+
+.footer-social a:hover {
+  color: var(--footer-link-hover);
+}
+
+@media (max-width: 768px) {
+  #footer {
+    padding: 1rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+  }
+
+  .footer-social {
+    margin-top: 10px;
+  }
+}
+.ico{
+  width: 30px;
+  text-align: center;
+  align-items: center;
+  margin-top: 13px;
+}
